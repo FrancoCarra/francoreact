@@ -1,7 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import './NavBar.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import CardWidget from "./CardWidget";
+
+
+
 
  export const NavBar = () => {
 return (
@@ -22,6 +25,7 @@ return (
       <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
       </li>
+      <CardWidget/>
     </ul>
   </div>
 </nav>
