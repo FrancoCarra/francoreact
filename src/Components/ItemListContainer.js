@@ -1,5 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import ItemCount from "./ItemCount";
 
 
 
@@ -10,6 +11,7 @@ return (
    <>
     <div>
         {greetings}
+        <ItemCount/>
     </div>
   </>
 )

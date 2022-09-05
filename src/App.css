@@ -42,3 +42,22 @@
 .navbar-nav{
   padding-left: 50rem !important;
 }
+
+/*Counter*/
+.card{
+  margin: 5rem;
+  align-items: center;
+}
+.buttons{
+  padding: 1rem;
+}
+.button-1{
+  margin: 1rem;
+}
+.button-2{
+  margin: 1rem;
+}
+.container-count{
+  margin: 5rem;
+  padding-bottom: 1rem;
+}
