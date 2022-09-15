@@ -1,17 +1,17 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
 
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Link } from 'react-router-dom'
 
 
  export const Item = ({info}) => {
 return (
    <>
-    <a href="#" className="film">
+    <Link to={`/detalle/${info.id}`} className="film">
         <img src={info.image}/>
         <p>{info.title}</p>
-    </a>
+    </Link>
   </>
 )
 }

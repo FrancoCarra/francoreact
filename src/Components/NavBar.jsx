@@ -2,7 +2,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import CardWidget from "./CardWidget";
-
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -17,13 +17,13 @@ return (
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
+        <NavLink class="nav-link" to="/">Home</NavLink>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <NavLink class="nav-link" to="/categoria/:categoriaId">Features</NavLink>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <NavLink class="nav-link" to="/categoria">Pricing</NavLink>
       </li>
       <CardWidget/>
     </ul>

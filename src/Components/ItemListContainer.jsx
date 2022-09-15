@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
-
+import { useParams } from 'react-router-dom'
 
 
 
@@ -13,7 +13,10 @@ const films = [
 ]
 
  export const ItemListContainer = ({greetings}) => {
+
   const [data, setData] = useState([]);
+
+  const {categoriaId} = useParams(); 
 
   useEffect (() =>{
 const getData = new Promise(resolve => {
@@ -21,8 +24,16 @@ const getData = new Promise(resolve => {
     resolve(films);
 }, 3000);
 });
-getData.then(res => setData(res));
-},[])
+if (categoriaId){
+  getData.then(res => res.filter(film => film.category === categoriaId));
+}else{
+  getData.then(res => setData(res));
+}
+
+
+
+
+ },[categoriaId])
 
   const onAdd = (quantity) =>{
     console.log(`compraste ${quantity} unidades`)
