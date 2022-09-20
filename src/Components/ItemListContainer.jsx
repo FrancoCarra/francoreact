@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import { useParams } from 'react-router-dom'
 
@@ -34,15 +33,10 @@ if (categoriaId){
 
 
  },[categoriaId])
-
-  const onAdd = (quantity) =>{
-    console.log(`compraste ${quantity} unidades`)
-  }
 return (
    <>
     <div>
         {greetings}
-        <ItemCount initial={3} stock={5} onAdd={onAdd} />
         <ItemList data ={data} />
     </div>
   </>
