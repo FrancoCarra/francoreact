@@ -5,19 +5,24 @@ import { ItemListContainer } from './Components/ItemListContainer';
 import { NavBar } from './Components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-rouer-dom';
 
+export const CartContext = React.createContext('')
+console.log('CartContext: ', CartContext)
+
 
 
 function App() {
   return (
     <>
-        <BrowserRouter>
+      <BrowserRouter>
+        <CartContext>
           <NavBar/>
             <Routes>
               <Route path='/' element={<ItemListContainer greetings='Buenas Tardes a todos!'/> }/>
               <Route path='/categoria/:categoriaId' element={<ItemListContainer/> }/>
               <Route path='/detalle/:detalleId' element={<ItemDetailContainer/> }/>
-        </Routes>
-    </BrowserRouter>
+            </Routes>
+        </CartContext>
+      </BrowserRouter>
     <ItemDetailContainer/>
     </>
   );
