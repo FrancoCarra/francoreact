@@ -18,6 +18,11 @@ const CartContext = React.createContext([]);
 console.log('carrito: ' , cart)
 const clearCart = () => setCart([]);
 
+const totalPrice = () => {
+    return cart.reduce((prev,act) => prev + act.quantity * act.price, 0);
+}
+const totalProducts = () => cart.reduce((acumulador, productoActual) => acumulador + productoActual.quantity, 0)
+
 const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
 const removeProduct = (id) => setCart(cart.filter(product => product.id !==id));
 
@@ -27,6 +32,9 @@ return(
         isInCart,
         removeProduct,
         AddProduct,
+        totalPrice,
+        totalProducts,
+        cart
         
     }}>
         {children}

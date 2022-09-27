@@ -6,9 +6,9 @@ import { useParams } from 'react-router-dom'
 
 
 const films = [
-  {id: 1, image: "https://pad.mymovies.it/filmclub/2014/01/001/locandina.jpg", title: 'Interestellar'},
-  {id: 2, image: "https://image.posterlounge.it/images/l/1898558.jpg", title: 'Star Strek'},
-  {id: 3, image: "https://pad.mymovies.it/filmclub/2006/07/192/locandina.jpg", title: 'Ronin'}
+  {id: 1, price: 200, image: "https://pad.mymovies.it/filmclub/2014/01/001/locandina.jpg", title: 'Interestellar', category: 'films'},
+  {id: 2, price: 250, image: "https://image.posterlounge.it/images/l/1898558.jpg", title: 'Star Strek', category: 'films'},
+  {id: 3, price: 100, image: "https://pad.mymovies.it/filmclub/2006/07/192/locandina.jpg", title: 'Ronin', category: 'films'}
 ]
 
  export const ItemListContainer = ({greetings}) => {
