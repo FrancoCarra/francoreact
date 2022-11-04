@@ -3,7 +3,8 @@ import './App.css';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 import { ItemListContainer } from './Components/ItemListContainer';
 import { NavBar } from './Components/NavBar';
-import { BrowserRouter, Routes, Route } from 'react-rouer-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './firebase/config'
 
 export const CartContext = React.createContext('')
 console.log('CartContext: ', CartContext)
@@ -13,6 +14,7 @@ console.log('CartContext: ', CartContext)
 function App() {
   return (
     <>
+
       <BrowserRouter>
         <CartContext>
           <NavBar/>
@@ -24,6 +26,7 @@ function App() {
         </CartContext>
       </BrowserRouter>
     <ItemDetailContainer/>
+
     </>
   );
 }
